@@ -24,7 +24,7 @@
         'security/security.xml',
       
         'views/product_template.xml',
-        'views/account_move.xml',
+        'views/sale_order.xml',
       
     ],
     # only loaded in demonstration mode
