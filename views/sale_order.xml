@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_sale_order_tax_control" model="ir.ui.view">
+		<field name="name">sales.order.tax_control</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_order_form" />
+		<field name="arch" type="xml">
+
+                    <field name="journal_id" position="after">
+                        <field name="disallow_modify_product_tax_in_invoice" invisible="1" />
+
+                    </field>
+
+                    <xpath expr = "//field[@name = 'order_line']/tree/field[@name = 'tax_id']" position="attributes">
+                        <attribute name="readonly">parent.disallow_modify_product_tax_in_invoice == True</attribute>
+                    </xpath>
+
+                    <xpath expr = "//field[@name = 'order_line']/tree/field[@name = 'discount']" position="after">
+                         <field name = "l_tax_reqiured" invisible="1"/>
+                    </xpath>
+                    <xpath expr = "//field[@name = 'order_line']/tree/field[@name = 'tax_id']" position="attributes">
+                        <attribute name="required">l_tax_reqiured == True</attribute>
+                    </xpath>
+
+
+
+            </field>
+        </record>
+</odoo>
