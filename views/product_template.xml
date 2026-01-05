@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+         <record id="product_tax_management_view" model="ir.ui.view">
+                <field name="name">product_tax_management_view</field>
+                <field name="model">product.template</field>
+                <field name="inherit_id" ref="product.product_template_only_form_view" />
+                <field name="arch" type="xml">
+                     <xpath expr="//field[@name='categ_id']" position="before">
+                            <field name="tax_reqiured" />
+                     </xpath>
+ 
+
+                </field>
+	    </record>
+
+     
+    </data>
+
+
+
+</odoo>
