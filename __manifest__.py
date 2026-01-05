@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'yousentech_invoicing_tax_mgt',
+    'name': 'yousentech_sale_tax_mgt',
 	'version': '17.0.1.0.0',
-	'summary': 'yousentech_invoicing_tax_mgt',
+	'summary': 'yousentech_sale_tax_mgt',
 	'category': 'Tools',
 	'author': 'Developers team',
 	'maintainer': 'qimamhd-tech Techno Solutions',
@@ -16,7 +16,7 @@
    
 
     # any module necessary for this one to work correctly
-    'depends': ['base','account'],
+    'depends': ['base','account','sale','yousentech_invoicing_tax_mgt'],
 
     # always loaded
     'data': [
