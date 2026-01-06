@@ -16,7 +16,7 @@
                     </xpath>
 
                     <xpath expr = "//field[@name = 'order_line']/tree/field[@name = 'discount']" position="after">
-                         <field name = "l_tax_reqiured" invisible="1"/>
+                         <field name = "l_tax_reqiured" column_invisible="1"/>
                     </xpath>
                     <xpath expr = "//field[@name = 'order_line']/tree/field[@name = 'tax_id']" position="attributes">
                         <attribute name="required">l_tax_reqiured == True</attribute>
