@@ -3,7 +3,7 @@
 	<data>
 
 		<record id="group_disallow_modify_product_tax_in_invoice" model="res.groups">
-			<field name="name">Dis allow modify tax in Invoice</field>
+			<field name="name">Dis allow modify tax in Sale order</field>
 		</record>
     </data>
 </odoo>
